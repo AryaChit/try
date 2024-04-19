@@ -1,0 +1,11 @@
+Select p.patientID From hospital AS h JOIN patients as p on h.patientID=p.PatientID Where patientName Like "A%";
+
+Delete From doctors Where salary>(SELECT AVG(salary) FROM doctors;
+ 
+UPDATE doctors SET salary=salary+salary*18.5 WHERE department=”OPD”
+
+Select AVG(Salary) AS average_salary, Address From doctors Group By Address Having averageSal>55000;
+
+Create View forVisitors AS Select d.DoctorID, DoctorName, Department,p.PatientName From doctors AS d Join hospital AS h on d.DoctorID=h.DoctorId Join patient AS p on p.patientID=h.patientID;
+
+
